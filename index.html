@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Marson Lova</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/hamburger.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/logo.png" alt="Logo" class="logo">
+
+            <div class="hamburger" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#accueil"><span>Accueil</span></a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil">
+        <div class="hero-container">
+            <div class="hero-photo">
+                <img src="images/photo.jpg" alt="Marson Lova Fahendrena">
+            </div>
+            <div class="hero-text">
+                <h1 class="hero-subtitle">Bonjour, Je suis</h1>
+                <h1 class="hero-title">Marson Lova Fahendrena</h1>
+                <p class="hero-sub">Etudiant en Licence Informatique <br> A la recherche d'un <strong>stage en data/developpement + alternance en septembre 2026</strong>
+                </p>
+                <div class="cta-buttons">
+                    <a href="images/CV MARSON LOVA Fahendrena.pdf" download class="cta-btn btn-primary">
+                        <i class="fas fa-download"></i> Télécharger CV
+                    </a>
+                    <a href="#contact" class="cta-btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i> Me Contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences">
+        <h2 class="section-title">Compétences</h2>
+<div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Langages</h3>
+                <ul style="text-align: left; list-style: none; padding: 0;">
+                    <li>🐍 PYTHON</li>
+                    <li>☕ JAVA</li>
+                    <li>⚙️ C</li>
+                    <li>📊 SQL</li>
+                    <li>🐚 BASH</li>
+                    <li>🌐 HTML/CSS/JS</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Outils</h3>
+                <ul style="text-align: left; list-style: none; padding: 0;">
+                    <li>🐧 LINUX</li>
+                    <li>🐙 GIT/GITHUB</li>
+                    <li>⚙️ VSCODE</li>
+                    <li>📈 EXCEL</li>
+                    <li>📓 JUPYTER NOTEBOOK</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Soft Skills</h3>
+                <ul style="text-align: left; list-style: none; padding: 0;">
+                    <li>📊 Analyse de données</li>
+                    <li>👥 Travail en équipe</li>
+                    <li>📋 Gestion de projet</li>
+                    <li>🚀 Autonome</li>
+                    <li>🔄 Adaptabilité</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Concepts fondamentaux</h3>
+                <ul style="text-align: left; list-style: none; padding: 0;">
+                    <li>💻 Programmation Orientée Objet</li>
+                    <li>⚙️ Algorithmes</li>
+                    <li>📚 Structures de Données</li>
+                    <li>🔗 Modèle Relationnel</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets">
+        <h2 class="section-title">Projets Réalisés</h2>
+        <div class="projects-grid">
+            <div class="project-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('images/portfolio.jpeg'); background-size: cover; background-position: center; height: 400px;">
+                <div class="project-overlay">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Portfolio Personnel</h3>
+                    <p>Concevoir et développer un portfolio entièrement responsive</p>
+                    <div class="project-tech">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('images/automate.jpg'); background-size: cover; background-position: center; height: 400px;">
+                <div class="project-overlay">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Automates Finis</h3>
+                    <p>Projet utilisant Python avec classes d'objets </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Jupyter Notebook</span>
+                        <span>Git/GitHub</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('images/innovation.jpeg'); background-size: cover; background-position: center; height: 400px;">
+                <div class="project-overlay">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Diffusion d'Innovation</h3>
+                    <p>Hypothèse : Publicité > influence pairs dans adoption innovation </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Jupyter Notebook</span>
+                        <span>Git/GitHub</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formation">
+        <h2 class="section-title">Formation</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Licence en Informatique</h3>
+                    <span class="timeline-date">2022 - 2025</span>
+                    <p>Université de Madagascar</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Baccalauréat</h3>
+                    <span class="timeline-date">2022</span>
+                    <p>Lycée Français</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiences">
+        <h2 class="section-title">Expériences</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Développeur Freelance</h3>
+                    <span class="timeline-date">2023 - Aujourd'hui</span>
+                    <p>Projets web pour clients</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Stage Dev Web</h3>
+                    <span class="timeline-date">2023</span>
+                    <p>TechMad Madagascar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Nom" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button>Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Marson Lova. <a href="#accueil">Haut</a></p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
