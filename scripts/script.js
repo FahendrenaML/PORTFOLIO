@@ -1,26 +1,100 @@
-// Portfolio script - Pure CSS hamburger + auto-close on nav click
-document.addEventListener('DOMContentLoaded', () => {
-  // Close menu on nav link click
-  document.querySelectorAll('.nav-menu a[href^=\"#\"]').forEach(anchor => {
-    anchor.addEventListener('click', () => {
-      document.getElementById('menu-toggle').checked = false;
-    });
-  });
+// Portfolio script complet
+document.addEventListener('DOMContentLoaded', function() {
+  // Menu hamburger
+  function toggleMenu() {
+    const menu = document.querySelector('.nav-menu');
+    menu.classList.toggle('active');
+  }
 
-  // Smooth scroll for non-nav anchor links
-  document.querySelectorAll('a[href^=\"#\"]:not(.nav-menu a)').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth'
-        });
+  // Modal Portfolio
+  window.openPortfolioModal = function() {
+    const modal = document.getElementById('portfolio-modal');
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      console.log('Modal ouverte');
+    }
+  };
+
+  window.closePortfolioModal = function() {
+    const modal = document.getElementById('portfolio-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      console.log('Modal fermée');
+    }
+  };
+
+  // Modal Automates Finis
+  window.openAutomatesModal = function() {
+    const modal = document.getElementById('automates-modal');
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      console.log('Modal Automates ouverte');
+    }
+  };
+
+  window.closeAutomatesModal = function() {
+    console.log('Fermeture modal Automates appelée');
+    const modal = document.getElementById('automates-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      console.log('Modal Automates fermée');
+    } else {
+      console.log('Modal Automates non trouvée');
+    }
+  };
+
+  // Modal Diffusion d'Innovation
+  window.openInnovationModal = function() {
+    const modal = document.getElementById('innovation-modal');
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      console.log('Modal Innovation ouverte');
+    }
+  };
+
+  window.closeInnovationModal = function() {
+    console.log('Fermeture modal Innovation appelée');
+    const modal = document.getElementById('innovation-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      console.log('Modal Innovation fermée');
+    } else {
+      console.log('Modal Innovation non trouvée');
+    }
+  };
+
+  // Open modal from any trigger button
+  document.querySelectorAll('.modal-trigger').forEach(button => {
+    button.addEventListener('click', function() {
+      // Chercher le titre du projet (h3) le plus proche
+      const projectCard = this.closest('.project-card');
+      const projectTitle = projectCard ? projectCard.querySelector('h3').textContent : '';
+      console.log('Clic sur modal-trigger. Titre du projet:', projectTitle);
+      
+      if (projectTitle.includes('Automates')) {
+        console.log('Ouverture modal Automates');
+        openAutomatesModal();
+      } else if (projectTitle.includes('Diffusion')) {
+        console.log('Ouverture modal Diffusion');
+        openInnovationModal();
+      } else {
+        console.log('Ouverture modal Portfolio');
+        openPortfolioModal();
       }
     });
   });
+  // Close menu on nav click
+  document.querySelectorAll('.nav-menu a[href^=\"#\"]').forEach(anchor => {
+    anchor.addEventListener('click', toggleMenu);
+  });
 
-  // Skill bars animation on scroll
+  // Skill bars
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -35,11 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.skill-card').forEach((card) => {
     observer.observe(card);
   });
-  
-  console.log('Script loaded - menu auto-close + scroll & skills');
-});
 
-function toggleMenu() {
-  const menu = document.querySelector(".nav-menu");
-  menu.classList.toggle("active");
-}
+  console.log('Portfolio complet chargé - testez \"Voir le détails\" ou console openPortfolioModal()');
+  
+  // Expose toggleMenu globalement
+  window.toggleMenu = toggleMenu;
+});

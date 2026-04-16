@@ -112,9 +112,9 @@
     <section id="projets">
         <h2 class="section-title">Projets Réalisés</h2>
         <div class="projects-grid">
-            <div class="project-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('images/portfolio.jpeg'); background-size: cover; background-position: center; height: 400px;">
+                <div class="project-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('images/portfolio.jpeg'); background-size: cover; background-position: center; height: 400px;">
                 <div class="project-overlay">
-                    <i class="fas fa-eye"></i>
+                    <i class="fas fa-eye portfolio-eye"></i>
                 </div>
                 <div class="project-content">
                     <h3>Portfolio Personnel</h3>
@@ -125,8 +125,8 @@
                         <span>Bootstrap</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/FahendrenaML/PORTFOLIO" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                        <button type="button" class="project-link modal-trigger" style="cursor:pointer;">Voir le détails</button>
                     </div>
                 </div>
             </div>
@@ -143,8 +143,8 @@
                         <span>Git/GitHub</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/FahendrenaML/Programmation_automate_finis" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                        <button type="button" class="project-link modal-trigger">Voir le détails</button>
                     </div>
                 </div>
             </div>
@@ -161,8 +161,7 @@
                         <span>Git/GitHub</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        <button type="button" class="project-link modal-trigger">Voir le détails</button>
                     </div>
                 </div>
             </div>
@@ -223,6 +222,83 @@
         <p>&copy; 2024 Marson Lova. <a href="#accueil">Haut</a></p>
     </footer>
 
+    <!-- Modal Portfolio Personnel -->
+    <div class="project-modal" id="portfolio-modal">
+      <div class="modal-overlay" onclick="closePortfolioModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+          <span class="close-modal" onclick="closePortfolioModal()">&times;</span>
+          <h3>Portfolio Personnel</h3>
+          <p class="modal-desc">Conception et développement complet d'un portfolio web moderne et entièrement responsive. Ce projet démontre mes compétences en design et mon envie de ma développer.</p>
+          <div class="modal-tech">
+            <strong>Outils utilisés :</strong><br>
+            HTML5 • CSS • JavaScript • Bootstrap
+          </div>
+          <div class="modal-date">
+            <strong>Date de réalisation :</strong> 2025
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/FahendrenaML/PORTFOLIO" target="_blank" rel="noopener noreferrer" class="btn-primary modal-btn">
+              <i class="fab fa-github"></i> Voir sur GitHub
+            </a>
+            <button type="button" class="btn-secondary modal-btn" onclick="closePortfolioModal()">
+              Retour
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Automates Finis -->
+    <div class="project-modal" id="automates-modal">
+      <div class="modal-overlay" onclick="closeAutomatesModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+          <span class="close-modal" onclick="closeAutomatesModal()">&times;</span>
+          <h3>Automates Finis</h3>
+          <p class="modal-desc">L'objectif de ce projet est de programmer en python quelques uns des algorithmes pour les automates finis vus en cours et en TD, en utilisant des structures de données fournies.</p>
+          <div class="modal-tech">
+            <strong>Outils utilisés :</strong><br>
+            Python • Jupyter Notebook • Git/GitHub
+          </div>
+          <div class="modal-date">
+            <strong>Date de réalisation :</strong> 2025
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/FahendrenaML/Programmation_automate_finis" target="_blank" rel="noopener noreferrer" class="btn-primary modal-btn">
+              <i class="fab fa-github"></i> Voir sur GitHub
+            </a>
+            <button type="button" class="btn-secondary modal-btn" onclick="closeAutomatesModal()">
+              Retour
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Diffusion d'Innovation -->
+    <div class="project-modal" id="innovation-modal">
+      <div class="modal-overlay" onclick="closeInnovationModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+          <span class="close-modal" onclick="closeInnovationModal()">&times;</span>
+          <h3>Diffusion d'Innovation</h3>
+          <p class="modal-desc">L'objectif principal est de comprendre ce qui influence le plus les individus lorsqu'ils décident d'adopter une idée ou une nouvelles produit. On a choisi comme hypothèse : La publicité/communication impacte plus les individus dans l'adoption de l'innovation que l'influence des pairs.</p>
+          <div class="modal-tech">
+            <strong>Outils utilisés :</strong><br>
+            Python • Jupyter Notebook • Git/GitHub
+          </div>
+          <div class="modal-date">
+            <strong>Date de réalisation :</strong> 2024
+          </div>
+          <div class="modal-actions">
+            <p class="modal-note">NB le projet n'est plus disponible sur Github</p>
+            <button type="button" class="btn-secondary modal-btn" onclick="closeInnovationModal()">
+              Retour
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="scripts/script.js"></script>
+
 </body>
 </html>
