@@ -1,5 +1,32 @@
 // Portfolio script complet
 document.addEventListener('DOMContentLoaded', function() {
+  // Dark mode toggle
+  function toggleDarkMode() {
+    const root = document.documentElement;
+  const toggleBtn = document.getElementById('theme-toggle');
+    const isDark = root.getAttribute('data-theme') === 'dark';
+
+    if (isDark) {
+      root.removeAttribute('data-theme');
+      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+      localStorage.setItem('theme', 'light');
+    } else {
+      root.setAttribute('data-theme', 'dark');
+      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-moon"></i>';
+  }
+
+  // Expose toggleDarkMode globally
+  window.toggleDarkMode = toggleDarkMode;
+
   // Menu hamburger
   function toggleMenu() {
     const menu = document.querySelector('.nav-menu');
