@@ -30,6 +30,7 @@ body {
   line-height: 1.6;
   color: var(--text-dark);
   background: var(--light-bg);
+  padding-top: 80px; /* Balanced - no overlap, less descent */
 }
 
 header {
@@ -1133,6 +1134,9 @@ footer {
 
 /* 📱 Mode mobile */
 @media (max-width: 768px) {
+  body {
+    padding-top: 90px; /* Balanced mobile */
+  }
 
   .hamburger {
     display: block;
