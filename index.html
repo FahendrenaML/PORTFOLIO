@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Marson Lova</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>PORTFOLIO-MARSON LOVA Fahendrena</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/hamburger.css">
@@ -172,17 +171,34 @@
         <h2 class="section-title">Formation</h2>
         <div class="timeline">
             <div class="timeline-item">
+                <div class="timeline-point"></div>
                 <div class="timeline-content">
-                    <h3>Licence en Informatique</h3>
-                    <span class="timeline-date">2022 - 2025</span>
-                    <p>Université de Madagascar</p>
+                    <span class="timeline-period">Sept 2025 - Août 2026</span>
+                    <h3>Licence 2 Informatique - DANT <span class="timeline-badge">Stage obligatoire</span></h3>
+                    <p class="timeline-location">Sorbonne Université</p>
+                    <p>>Développement web , Bases de données, Algorithmique, architecture des données, Système et shell, Programmation Orientée Objets(JAVA)
+                    </p>
+                    <p class="timeline-note">Alternance prévus en Licence 3</p>
                 </div>
             </div>
             <div class="timeline-item">
+                <div class="timeline-point"></div>
                 <div class="timeline-content">
-                    <h3>Baccalauréat</h3>
-                    <span class="timeline-date">2022</span>
-                    <p>Lycée Français</p>
+                    <span class="timeline-period">Sept 2024 - Août 2025</span>
+                    <h3>Licence 1 - Sciences Formelles</h3>
+                    <p class="timeline-location">Sorbonne Université</p>
+                    <p> >Sciences des données (Jupyter notebook)
+                        , Programmation en Python et en C
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                    <span class="timeline-period">2023</span>
+                    <h3>Baccalauréat Scientifique</h3>
+                    <p class="timeline-location">Lycée Hibiscus, Madagascar</p>
+                    <p>Spécialité: Mathématiques, Physique-chimie et SVT.</p>
                 </div>
             </div>
         </div>
@@ -190,36 +206,92 @@
 
     <section id="experiences">
         <h2 class="section-title">Expériences</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Développeur Freelance</h3>
-                    <span class="timeline-date">2023 - Aujourd'hui</span>
-                    <p>Projets web pour clients</p>
-                </div>
+        <div class="experiences-grid">
+            <div class="experience-card">
+                <h3>Hôte d'accueil/caisse</h3>
+                <p class="experience-company">LECLERC</p>
+                <span class="experience-date">Jan 2024 - Fev 2026</span>
+                <ul>
+                    <li>Assurer l'accueil des clients</li>
+                    <li>Aider, conseiller, orienter les clients</li>
+                    <li>Diriger une équipe de caisse</li>
+                    <li>Mise en rayon</li>
+                </ul>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Stage Dev Web</h3>
-                    <span class="timeline-date">2023</span>
-                    <p>TechMad Madagascar</p>
-                </div>
+            <div class="experience-card">
+                <h3>Hôte d'accueil</h3>
+                <p class="experience-company">Ambassade de Madagascar</p>
+                <span class="experience-date">Juin 2024</span>
+                <ul>
+                    <li>Accueillir les personnalités importantes pendant les évenements(ambassadeurs, invités)</li>
+                    <li>Coordonner le déroulement des évenements(logistiques, sonorisation)</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <h2 class="section-title">Contact</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Nom" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" rows="5" required></textarea>
-            <button>Envoyer</button>
-        </form>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:marsonlovafahendrena@gmail.com">marsonlovafahendrena@gmail.com</a></p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Téléphone</h3>
+                    <p><a href="tel:+33615929081">06 15 92 90 81</a></p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Paris 13</h3>
+                    <p>France</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-share-alt"></i></div>
+                    <h3>Réseaux</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/FahendrenaML" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/fahendrena-marson-lova/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <h3>Envoyer un message</h3>
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email" required>
+                <textarea placeholder="Votre message" rows="6" required></textarea>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Envoyer
+                </button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Marson Lova. <a href="#accueil">Haut</a></p>
+        <p>&copy; 2025 Fahendrena MARSON LOVA. Tout droits réservés.</p>
+        <nav class="footer-nav">
+            <a href="#accueil">Accueil</a>
+            <a href="#competences">Compétences</a>
+            <a href="#projets">Projet</a>
+            <a href="#formation">Formation</a>
+            <a href="#experiences">Expérience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-socials">
+            <a href="mailto:marsonlovafahendrena@gmail.com?subject=Message%20depuis%20le%20portfolio" class="footer-social-link" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/FahendrenaML" target="_blank" class="footer-social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/fahendrena-marson-lova/" target="_blank" class="footer-social-link" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
     </footer>
 
     <!-- Modal Portfolio Personnel -->
